@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const VisuallyHiddenInput = styled.input`
+export const VisuallyHiddenInput = styled.input`
   position: absolute;
   width: 1px;
   height: 1px;
@@ -14,5 +14,3 @@ const VisuallyHiddenInput = styled.input`
     outline: 1px solid #000000;
   }
 `;
-
-export default VisuallyHiddenInput;
