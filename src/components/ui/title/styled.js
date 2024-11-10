@@ -7,7 +7,7 @@ export const StyledTitle = styled.h1`
     let fontSize;
     switch (props.$size) {
       case TitleSizes.BIG:
-        fontSize = '48px';
+        fontSize = '40px';
         break;
       case TitleSizes.MEDIUM:
         fontSize = '36px';

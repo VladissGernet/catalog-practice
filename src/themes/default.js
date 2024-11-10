@@ -9,6 +9,7 @@ export const defaultTheme = {
   colorForSoftIcon: "#7fc92e",
   colorForButton: "#ff732B",
   colorForButtonHover: "#F35714",
+  colorCode: '#cccccc',
   pagePadding: "90px",
   indent: "20px",
   fontFamily: '"Inter", "Arial", sans-serif',
