@@ -19,18 +19,39 @@ const StyledSwiperImage = styled.img`
 `
 
 const StyledButton = styled.div`
-  background-color: white; /* Change to your desired color */
+  background-color: white;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  border: 2px solid black; /* Optional border */
+  border: 2px solid black;
 
   &::after {
     font-size: 24px;
   }
+
+  &:hover {
+      opacity: 0.6;
+  }
+
+  &.swiper-button-prev {
+    left: 0;
+  }
+
+  &.swiper-button-next {
+    right: 0;
+  }
+`;
+
+const StyledProductSlider = styled.div`
+  position: relative;
+  padding: 0 20px;
+  width: 280px;
 `;
 
 export {
   StyledSwiper,
   StyledSwiperSlide,
   StyledSwiperImage,
-  StyledButton
+  StyledButton,
+  StyledProductSlider
 };

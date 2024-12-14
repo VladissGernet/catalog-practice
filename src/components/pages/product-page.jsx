@@ -8,8 +8,6 @@ import {StyledTitle} from './styled';
 import {TitleSizes} from 'src/components/ui/title/title';
 import {Code} from 'src/components/ui/code/code';
 
-
-
 const ProductPage = () => {
   return (
     <PageContainer>
