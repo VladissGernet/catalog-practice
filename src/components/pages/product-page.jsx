@@ -8,6 +8,7 @@ import {StyledTitle} from './styled';
 import {TitleSizes} from 'src/components/ui/title/title';
 import {Code} from 'src/components/ui/code/code';
 import {Counter} from 'src/components/blocks/counter/counter';
+import {Price} from 'src/components/blocks/price/price';
 
 const ProductPage = () => {
   return (
@@ -16,6 +17,7 @@ const ProductPage = () => {
       <Code>{mockData[0].code}</Code>
       <ProductSlider mockDataObject={mockData[0]} />
       <Counter />
+      <Price />
     </PageContainer>
   );
 };
