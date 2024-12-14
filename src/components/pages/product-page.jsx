@@ -7,6 +7,7 @@ import {PageContainer} from 'src/components/layout/page-container/page-container
 import {StyledTitle} from './styled';
 import {TitleSizes} from 'src/components/ui/title/title';
 import {Code} from 'src/components/ui/code/code';
+import {Counter} from 'src/components/blocks/counter/counter';
 
 const ProductPage = () => {
   return (
@@ -14,6 +15,7 @@ const ProductPage = () => {
       <StyledTitle size={TitleSizes.BIG}>{mockData[0].title}</StyledTitle>
       <Code>{mockData[0].code}</Code>
       <ProductSlider mockDataObject={mockData[0]} />
+      <Counter />
     </PageContainer>
   );
 };
