@@ -14,6 +14,10 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
+  img {
+    border-style: none;
+  }
+
   body {
     position: relative;
     min-height: 100%;
