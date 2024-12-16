@@ -3,7 +3,7 @@ import React, {useContext} from "react";
 import {StyledList, StyledLink, StyledImage, StyledListItem} from './styled';
 
 import {ProductContext} from 'src/components/app/app';
-import {Price} from 'src/components/blocks/price/price';
+import {Price} from 'src/components/ui/price/price';
 
 const Catalog = () => {
   const data = useContext(ProductContext);
