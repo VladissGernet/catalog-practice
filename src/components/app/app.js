@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Данные продуктов.
 import {mockData} from 'src/mocks/mock-products';
 
+import { ScrollToTop } from "../blocks/scroll-to-top/scroll-to-top";
 import { PageContainer } from "/src/components/layout/page-container/page-container";
 import { Product } from "/src/components/pages/product/product";
 import { Page404 } from "../pages/page-404/page-404";
@@ -16,6 +17,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <GlobalStyle />
+      <ScrollToTop />
       <ProductContext.Provider value={mockData}>
         <Routes>
           <Route path="/" element={<PageContainer />} >
