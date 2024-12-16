@@ -1,10 +1,12 @@
-import React from "react";
+import React, {useContext} from "react";
 
 import {StyledList, StyledLink, StyledImage, StyledListItem} from './styled';
 
+import {ProductContext} from 'src/components/app/app';
 import {Price} from 'src/components/blocks/price/price';
 
-const Catalog = ({data}) => {
+const Catalog = () => {
+  const data = useContext(ProductContext);
 
   return (
     <section>

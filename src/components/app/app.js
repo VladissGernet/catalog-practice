@@ -1,35 +1,39 @@
-import React from "react";
+import React, {createContext} from "react";
 import { GlobalStyle } from './styled.js';
-import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { PageContainer } from "/src/components/layout/page-container/page-container";
-import {Product} from '/src/components/pages/product/product.jsx';
-import { Catalog } from "/src/components/pages/catalog/catalog";
-
+// Данные продуктов.
 import {mockData} from 'src/mocks/mock-products';
 
-function ProductOr404({ products }) {
-  const { code } = useParams();
-  const product = products.find((product) => product.code.toString() === code);
-  return product ? (
-    <Product product={product} />
-  ) : (
-    <h1>404 страница не найдена</h1>
-  );
-}
+import { PageContainer } from "/src/components/layout/page-container/page-container";
+import { ProductOr404 } from "/src/components/blocks/product-or-404/product-or-404";
+import { Catalog } from "/src/components/pages/catalog/catalog";
 
-export default function App() {
+const ProductContext = createContext();
+
+const App = () => {
   return (
     <BrowserRouter>
       <GlobalStyle />
-      <Routes>
-        <Route path="/" element={<PageContainer />} >
-          <Route index element={<Catalog data={mockData} />} />
-          <Route path="catalog/">
-            <Route path=":code" element={<Product data={mockData}/>} />
+      <ProductContext.Provider value={mockData}>
+        <Routes>
+          <Route path="/" element={<PageContainer />} >
+            <Route index element={<Catalog />} />
+            <Route path="catalog/">
+              <Route
+                path=":code"
+                element={<ProductOr404 />}
+              />
+            </Route>
+            <Route
+              path="*"
+              element={<ProductOr404 />}
+            />
           </Route>
-        </Route>
-      </Routes>
+        </Routes>
+      </ProductContext.Provider>
     </BrowserRouter>
   );
 }
+
+export { App, ProductContext };
