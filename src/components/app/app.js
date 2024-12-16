@@ -6,7 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {mockData} from 'src/mocks/mock-products';
 
 import { PageContainer } from "/src/components/layout/page-container/page-container";
-import { ProductOr404 } from "/src/components/blocks/product-or-404/product-or-404";
+import { Product } from "/src/components/pages/product/product";
+import { Page404 } from "../pages/page-404/page-404";
 import { Catalog } from "/src/components/pages/catalog/catalog";
 
 const ProductContext = createContext();
@@ -22,12 +23,12 @@ const App = () => {
             <Route path="catalog/">
               <Route
                 path=":code"
-                element={<ProductOr404 />}
+                element={<Product />}
               />
             </Route>
             <Route
               path="*"
-              element={<ProductOr404 />}
+              element={<Page404 />}
             />
           </Route>
         </Routes>
