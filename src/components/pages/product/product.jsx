@@ -17,6 +17,8 @@ const Product = () => {
   const data = useContext(ProductContext);
   const product = data.find((product) => product.code === code);
 
+  // Остановился на стилизации страницы продукта.
+
   return product ? (
     <>
       <Title size={TitleSizes.BIG}>{product.title}</Title>

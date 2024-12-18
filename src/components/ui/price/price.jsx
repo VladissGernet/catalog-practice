@@ -1,8 +1,10 @@
 import React from "react";
-// Остановился на добавлении компонента Price
+
+import {StyledPrice} from './styled';
+
 const Price = ({children}) => {
   return (
-    <div>{children}</div>
+    <StyledPrice>{children}</StyledPrice>
   )
 };
 
