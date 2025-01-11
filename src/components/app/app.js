@@ -23,6 +23,7 @@ const App = () => {
           <Route path="/" element={<PageContainer />} >
             <Route index element={<Catalog />} />
             <Route path="catalog/">
+              {/* path - ссылка на страницу продукта. Далее см. Product */}
               <Route
                 path=":code"
                 element={<Product />}
