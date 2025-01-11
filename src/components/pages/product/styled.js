@@ -1,18 +1,21 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 import { Title } from 'src/components/ui/title/title';
-import { Price } from 'src/components/blocks/price/price';
 
+const titleStyles = css`
+  background-color: red;
+`;
+
+// Дополняю стили для компонента.
 const StyledTitle = styled(Title)`
-  margin-top: 200px !important;
-  line-height: 54px;
+  ${titleStyles}
 `;
 
-const StyledPrice = styled(Price)`
-  margin-top: 20px;
-  outline: 2px solid #000000;
-  display: none;
+const StyledSection = styled.section`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 `;
 
-export {StyledTitle, StyledPrice}
+
+export {StyledSection, StyledTitle}
 
