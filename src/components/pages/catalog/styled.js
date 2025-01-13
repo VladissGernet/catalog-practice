@@ -2,6 +2,14 @@ import styled from "styled-components";
 
 import {Link} from 'react-router-dom';
 
+import { StyledTitle } from 'src/components/ui/title/styled';
+
+const StyledSection = styled.section`
+  ${StyledTitle} {
+    margin-bottom: 40px;
+  }
+`;
+
 const StyledList = styled.ul`
   display: flex;
   flex-wrap: wrap;
@@ -27,4 +35,4 @@ const StyledImage = styled.img`
   display: block;
 `;
 
-export {StyledList, StyledLink, StyledImage, StyledListItem};
+export {StyledSection, StyledList, StyledLink, StyledImage, StyledListItem};

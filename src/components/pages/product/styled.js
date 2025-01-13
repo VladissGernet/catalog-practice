@@ -1,21 +1,45 @@
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 
-import { Title } from 'src/components/ui/title/title';
-
-const titleStyles = css`
-  background-color: red;
-`;
-
-// Дополняю стили для компонента.
-const StyledTitle = styled(Title)`
-  ${titleStyles}
-`;
+import { StyledTitle } from 'src/components/ui/title/styled';
+import { StyledCode } from 'src/components/ui/code/styled';
+import { StyledProductSlider } from 'src/components/blocks/slider/styled';
+import { CounterWrapper } from 'src/components/blocks/counter/styled';
+import { StyledPrice } from 'src/components/ui/price/styled';
 
 const StyledSection = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "title title"
+    "code code"
+    "slider price"
+    "slider counter"
+    "slider .";
+
+  ${StyledTitle} {
+    grid-area: title;
+
+    margin-bottom: 20px;
+  }
+
+  ${StyledCode} {
+    grid-area: code;
+    margin-bottom: 20px;
+  }
+
+  ${StyledProductSlider} {
+    grid-area: slider;
+  }
+
+  ${CounterWrapper} {
+    grid-area: counter;
+  }
+
+  ${StyledPrice} {
+    grid-area: price;
+  }
 `;
 
 
-export {StyledSection, StyledTitle}
+export {StyledSection}
 
