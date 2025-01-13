@@ -5,6 +5,7 @@ import { StyledCode } from 'src/components/ui/code/styled';
 import { StyledProductSlider } from 'src/components/blocks/slider/styled';
 import { CounterWrapper } from 'src/components/blocks/counter/styled';
 import { StyledPrice } from 'src/components/ui/price/styled';
+import { StyledDelivery } from 'src/components/ui/delivery/styled';
 
 const StyledSection = styled.section`
   display: grid;
@@ -14,6 +15,7 @@ const StyledSection = styled.section`
     "code code"
     "slider price"
     "slider counter"
+    "slider delivery"
     "slider .";
 
   ${StyledTitle} {
@@ -38,6 +40,10 @@ const StyledSection = styled.section`
   ${StyledPrice} {
     grid-area: price;
     margin-bottom: 10px;
+  }
+
+  ${StyledDelivery} {
+    grid-area: delivery;
   }
 `;
 

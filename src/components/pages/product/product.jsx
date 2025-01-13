@@ -4,13 +4,13 @@ import { useParams } from "react-router-dom";
 import {ProductContext} from 'src/components/app/app';
 
 import { ProductSlider } from "src/components/blocks/slider/slider";
-import {TitleSizes} from 'src/components/ui/title/title';
-import {Code} from 'src/components/ui/code/code';
 import {Counter} from 'src/components/blocks/counter/counter';
 import { Page404 } from "src/components/pages/page-404/page-404";
 
+import {Code} from 'src/components/ui/code/code';
 import { Price } from 'src/components/ui/price/price';
-import { Title } from 'src/components/ui/title/title';
+import { Title, TitleSizes } from 'src/components/ui/title/title';
+import { Delivery } from 'src/components/ui/delivery/delivery';
 
 import {StyledSection} from './styled';
 
@@ -26,6 +26,7 @@ const Product = () => {
       <ProductSlider mockDataObject={product} />
       <Counter />
       <Price>{product.price}</Price>
+      <Delivery>{product.delivery}</Delivery>
     </StyledSection>
   ) : (
     <Page404 />
