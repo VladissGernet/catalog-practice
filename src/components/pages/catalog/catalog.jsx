@@ -18,7 +18,7 @@ const Catalog = () => {
           return (
             <StyledListItem key={product.code}>
               <StyledLink to={`/catalog/${product.code}`}>
-                <h2>{product.title}</h2>
+                <Title level={2}>{product.title}</Title>
                 <StyledImage src={product.images[0]} alt={product.title} />
                 <Price>{product.price}</Price>
               </StyledLink>
