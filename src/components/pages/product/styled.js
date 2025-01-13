@@ -37,6 +37,7 @@ const StyledSection = styled.section`
 
   ${StyledPrice} {
     grid-area: price;
+    margin-bottom: 10px;
   }
 `;
 

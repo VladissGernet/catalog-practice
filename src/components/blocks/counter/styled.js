@@ -1,7 +1,15 @@
 import styled from "styled-components";
 
 const CounterWrapper = styled.div`
-  outline: 2px solid #000000;
+  margin-bottom: 20px;
 `;
 
-export { CounterWrapper };
+const CounterText = styled.span`
+  margin-right: 20px;
+`;
+
+const CounterValue = styled.span`
+  margin: 0 10px;
+`;
+
+export { CounterWrapper, CounterText, CounterValue };

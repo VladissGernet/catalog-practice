@@ -4,7 +4,7 @@ import {StyledPrice} from './styled';
 
 const Price = ({children}) => {
   return (
-    <StyledPrice>{children}</StyledPrice>
+    <StyledPrice>Цена: {children}</StyledPrice>
   )
 };
 

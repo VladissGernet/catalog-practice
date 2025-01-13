@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { CounterWrapper } from "./styled";
+import { CounterWrapper, CounterText, CounterValue } from "./styled";
 
 const reduceQuantity = (quantity) => quantity > 1 ? quantity - 1 : 1;
 
@@ -8,9 +8,9 @@ const Counter = () => {
   const [quantity, setQuantity] = useState(1);
   return (
     <CounterWrapper>
-      Количество:{' '}
+      <CounterText>Количество:</CounterText>
       <button type="button" onClick={() => setQuantity(reduceQuantity(quantity))}>-</button>
-      {quantity}
+      <CounterValue>{quantity}</CounterValue>
       <button type="button" onClick={() => setQuantity(quantity + 1)}>+</button>
     </CounterWrapper>
   );
