@@ -1,4 +1,6 @@
 export const defaultTheme = {
+  colorPrice: "darkred",
+  colorLink: "#000000",
   colorBlackForText: "#333333",
   colorWhite: "#ffffff",
   colorGray: "#f6f6f6",
