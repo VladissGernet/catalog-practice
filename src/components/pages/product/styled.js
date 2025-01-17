@@ -6,6 +6,7 @@ import { StyledProductSlider } from 'src/components/blocks/slider/styled';
 import { CounterWrapper } from 'src/components/blocks/counter/styled';
 import { StyledPrice } from 'src/components/ui/price/styled';
 import { StyledDelivery } from 'src/components/ui/delivery/styled';
+import { StyledButton } from 'src/components/ui/button/styled';
 
 const StyledSection = styled.section`
   display: grid;
@@ -16,6 +17,7 @@ const StyledSection = styled.section`
     "slider price"
     "slider counter"
     "slider delivery"
+    "slider button"
     "slider .";
 
   ${StyledTitle} {
@@ -44,6 +46,11 @@ const StyledSection = styled.section`
 
   ${StyledDelivery} {
     grid-area: delivery;
+  }
+
+  ${StyledButton} {
+    grid-area: button;
+    margin-top: 40px;
   }
 `;
 
