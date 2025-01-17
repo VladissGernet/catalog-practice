@@ -29,8 +29,8 @@ const Product = () => {
       <Title size={TitleSizes.BIG}>{product.title}</Title>
       <Code>{product.code}</Code>
       <ProductSlider mockDataObject={product} />
-      <Counter />
-      <Price>{product.price}</Price>
+      <Counter value={1} />
+      <Price>{product.price} ₽</Price>
       <Delivery>{product.delivery}</Delivery>
       <Button onButtonClick={onButtonClick}>Добавить в корзину</Button>
     </StyledSection>
