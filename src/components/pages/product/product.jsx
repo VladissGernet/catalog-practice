@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import { useParams } from "react-router-dom";
 
 import {ProductContext} from 'src/components/app/app';
@@ -19,18 +19,23 @@ const onButtonClick = () => {
   console.log('Добавить в корзину');
 };
 
+const INITIAL_QUANTITY = 1;
+
 const Product = () => {
   const {code} = useParams(); // Получаем код продукта на который кликнули.
   const data = useContext(ProductContext);
   const product = data.find((product) => product.code === code);
+
+  const [quantity, setQuantity] = useState(INITIAL_QUANTITY); // Количество продукта.
+  const price = product.price * quantity;
 
   return product ? (
     <StyledSection>
       <Title size={TitleSizes.BIG}>{product.title}</Title>
       <Code>{product.code}</Code>
       <ProductSlider mockDataObject={product} />
-      <Counter value={1} />
-      <Price>{product.price} ₽</Price>
+      <Counter quantity={quantity} onChange={setQuantity} />
+      <Price>{price} ₽</Price>
       <Delivery>{product.delivery}</Delivery>
       <Button onButtonClick={onButtonClick}>Добавить в корзину</Button>
     </StyledSection>
