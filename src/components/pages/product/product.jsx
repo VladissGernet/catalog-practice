@@ -41,7 +41,7 @@ const Product = () => {
       <Price>{price} ₽</Price>
       <Delivery>{product.delivery}</Delivery>
       <Button onButtonClick={onButtonClick}>Купить</Button>
-      <PopUp ref={popUpRef} />
+      <PopUp ref={popUpRef}/>
     </StyledSection>
   ) : (
     <Page404 />
