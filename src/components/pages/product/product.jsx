@@ -1,4 +1,4 @@
-import React, {useContext, useState, useRef, useEffect} from "react";
+import React, {useContext, useState, useRef} from "react";
 import { useParams } from "react-router-dom";
 
 import {ProductContext} from 'src/components/app/app';
@@ -16,10 +16,6 @@ import { PopUp } from 'src/components/blocks/pop-up/pop-up';
 
 import {StyledSection} from './styled';
 
-const onButtonClick = () => {
-  console.log('Добавить в корзину');
-};
-
 const INITIAL_QUANTITY = 1;
 
 const Product = () => {
@@ -32,9 +28,9 @@ const Product = () => {
 
   const popUpRef = useRef(null);
 
-  useEffect(() => {
+  const onButtonClick = () => {
     popUpRef.current.showModal();
-  });
+  };
 
   return product ? (
     <StyledSection>
