@@ -13,6 +13,7 @@ import { Title, TitleSizes } from 'src/components/ui/title/title';
 import { Delivery } from 'src/components/ui/delivery/delivery';
 import { Button } from 'src/components/ui/button/button';
 import { PopUp } from 'src/components/blocks/pop-up/pop-up';
+import { Order } from 'src/components/blocks/order/order';
 
 import {StyledSection} from './styled';
 
@@ -41,7 +42,9 @@ const Product = () => {
       <Price>{price} ₽</Price>
       <Delivery>{product.delivery}</Delivery>
       <Button onButtonClick={onButtonClick}>Купить</Button>
-      <PopUp ref={popUpRef}/>
+      <PopUp ref={popUpRef}>
+        <Order></Order>
+      </PopUp>
     </StyledSection>
   ) : (
     <Page404 />

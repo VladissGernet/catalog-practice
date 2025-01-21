@@ -6,9 +6,10 @@ const Button = ({
   children,
   onButtonClick,
   buttonType = 'button',
+  isDisabled
 }) => {
   return (
-    <StyledButton type={buttonType} onClick={onButtonClick}>{children}</StyledButton>
+    <StyledButton disabled={isDisabled} type={buttonType} onClick={onButtonClick}>{children}</StyledButton>
   )
 };
 

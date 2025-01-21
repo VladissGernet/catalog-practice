@@ -16,6 +16,11 @@ const StyledButton = styled.button`
   &:active {
     opacity: 0.6;
   }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
 `;
 
 export { StyledButton };
