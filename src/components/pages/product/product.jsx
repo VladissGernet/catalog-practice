@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import {ProductContext} from 'src/components/app/app';
 
 import { ProductSlider } from "src/components/blocks/slider/slider";
-import {Counter} from 'src/components/blocks/counter/counter';
+import { Counter } from 'src/components/blocks/counter/counter';
 import { Page404 } from "src/components/pages/page-404/page-404";
 
 import { Code } from 'src/components/ui/code/code';
@@ -14,6 +14,7 @@ import { Delivery } from 'src/components/ui/delivery/delivery';
 import { Button } from 'src/components/ui/button/button';
 import { PopUp } from 'src/components/blocks/pop-up/pop-up';
 import { Order } from 'src/components/blocks/order/order';
+import { Tabs } from 'src/components/blocks/tabs/tabs';
 
 import {StyledSection} from './styled';
 
@@ -42,6 +43,7 @@ const Product = () => {
       <Price>{price} ₽</Price>
       <Delivery>{product.delivery}</Delivery>
       <Button onButtonClick={onButtonClick}>Купить</Button>
+      <Tabs />
       <PopUp ref={popUpRef}>
         <Order />
       </PopUp>

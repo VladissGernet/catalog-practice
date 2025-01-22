@@ -7,6 +7,7 @@ import { CounterWrapper } from 'src/components/blocks/counter/styled';
 import { StyledPrice } from 'src/components/ui/price/styled';
 import { StyledDelivery } from 'src/components/ui/delivery/styled';
 import { StyledButton } from 'src/components/ui/button/styled';
+import { StyledTabs } from 'src/components/blocks/tabs/styled';
 
 const StyledSection = styled.section`
   display: grid;
@@ -18,7 +19,8 @@ const StyledSection = styled.section`
     "slider counter"
     "slider delivery"
     "slider button"
-    "slider .";
+    "slider ."
+    "tabs tabs";
 
   ${StyledTitle} {
     grid-area: title;
@@ -51,6 +53,12 @@ const StyledSection = styled.section`
   ${StyledButton} {
     grid-area: button;
     margin-top: 40px;
+  }
+
+  ${StyledTabs} {
+    grid-area: tabs;
+
+    margin-top: 30px;
   }
 `;
 
