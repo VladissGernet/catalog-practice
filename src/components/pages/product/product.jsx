@@ -43,7 +43,7 @@ const Product = () => {
       <Delivery>{product.delivery}</Delivery>
       <Button onButtonClick={onButtonClick}>Купить</Button>
       <PopUp ref={popUpRef}>
-        <Order></Order>
+        <Order />
       </PopUp>
     </StyledSection>
   ) : (
