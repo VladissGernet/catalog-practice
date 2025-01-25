@@ -34,6 +34,27 @@ const Product = () => {
     popUpRef.current.showModal();
   };
 
+  // Остановился на создании контента табов и кнопок для переключения.
+
+  const tabs = [
+    {
+      title: 'Описание',
+      content: (
+        <p>
+          Lorem ipsum odor amet, consectetuer adipiscing elit. Nam senectus metus pulvinar diam venenatis velit dolor varius. Ultrices montes malesuada rutrum ut accumsan taciti gravida. Porttitor class bibendum purus dui dis amet. Conubia sollicitudin pharetra vivamus himenaeos volutpat volutpat. Pretium cursus nulla interdum felis ad montes imperdiet accumsan. Torquent euismod nec ac eleifend condimentum. Netus ridiculus arcu sociosqu odio orci.
+        </p>
+      )
+    },
+    {
+      title: 'Комментарии',
+      content: (
+        <p>
+          Другой контент
+        </p>
+      )
+    }
+  ]
+
   return product ? (
     <StyledSection>
       <Title size={TitleSizes.BIG}>{product.title}</Title>
@@ -43,7 +64,7 @@ const Product = () => {
       <Price>{price} ₽</Price>
       <Delivery>{product.delivery}</Delivery>
       <Button onButtonClick={onButtonClick}>Купить</Button>
-      <Tabs />
+      <Tabs tabs={tabs} />
       <PopUp ref={popUpRef}>
         <Order />
       </PopUp>

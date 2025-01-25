@@ -1,10 +1,37 @@
 import React from "react";
 
-import { StyledTabs } from './styled';
+import { StyledTabs, TabButtons, Content } from './styled';
 
-const Tabs = () => {
+import { Button } from 'src/components/ui/button/button';
+
+const Tabs = ({tabs}) => {
   return (
-    <StyledTabs>tabs</StyledTabs>
+    <StyledTabs>
+      <TabButtons>
+        {
+          tabs &&
+            tabs.length &&
+            tabs.map((element) => {
+              return (
+                <Button key={element.title}>{element.title}</Button>
+              )
+            })
+          }
+      </TabButtons>
+      <Content>
+        {
+          tabs &&
+            tabs.length &&
+            tabs.map((element) => {
+              return (
+                <React.Fragment key={element.title}>
+                  {element.content}
+                </React.Fragment>
+              )
+            })
+        }
+      </Content>
+    </StyledTabs>
   )
 };
 
