@@ -9,6 +9,8 @@ const StyledButton = styled.button`
   cursor: pointer;
   box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.25);
 
+  transition: all 0.3s ease;
+
   &:hover {
     background-color: ${(props) => props.theme.colorForButtonHover};
   }
