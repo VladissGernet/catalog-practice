@@ -15,6 +15,7 @@ import { Button } from 'src/components/ui/button/button';
 import { PopUp } from 'src/components/blocks/pop-up/pop-up';
 import { Order } from 'src/components/blocks/order/order';
 import { Tabs } from 'src/components/blocks/tabs/tabs';
+import { Comments } from 'src/components/blocks/comments/comments';
 
 import {StyledSection} from './styled';
 
@@ -34,15 +35,11 @@ const Product = () => {
     popUpRef.current.showModal();
   };
 
-  // Остановился на создании контента табов и кнопок для переключения.
-
   const tabs = [
     {
       title: 'Описание',
       content: (
-        <p>
-          Lorem ipsum odor amet, consectetuer adipiscing elit. Nam senectus metus pulvinar diam venenatis velit dolor varius. Ultrices montes malesuada rutrum ut accumsan taciti gravida. Porttitor class bibendum purus dui dis amet. Conubia sollicitudin pharetra vivamus himenaeos volutpat volutpat. Pretium cursus nulla interdum felis ad montes imperdiet accumsan. Torquent euismod nec ac eleifend condimentum. Netus ridiculus arcu sociosqu odio orci.
-        </p>
+        <Comments />
       )
     },
     {
