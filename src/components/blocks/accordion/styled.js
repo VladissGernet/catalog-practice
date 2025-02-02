@@ -29,6 +29,7 @@ const AccordionContentWrapper = styled.div`
   overflow: hidden;
 
   height: 0;
+  transition: all 0.3s ease;
 `;
 
 const AccordionContent = styled.div`

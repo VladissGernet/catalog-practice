@@ -32,11 +32,17 @@ const Accordion = ({tabs}) => {
     setActiveTabs(newActiveTabs);
   };
 
-  // Перерисовка при изменении контента в accordion.
+  // Вызов перерисовки при изменении контента в accordion.
   useEffect(() => {
-    ContentRefs.current.find((element) => {
-      console.log(element);
-    })
+    // Создаю новый массив высот копируя из предыдущего.
+    const newHeights = [...heights];
+    // Перезаписываю высоту элемента с индексом index.
+    newHeights.forEach((_, index) => {
+      newHeights[index] = ContentRefs.current[index].scrollHeight;
+    });
+    // Записываю новый массив высот в useState и вызываю тем самым перерисовку.
+    setHeight(newHeights);
+
   }, [tabs]);
 
   return (
