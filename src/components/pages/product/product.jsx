@@ -15,13 +15,14 @@ import { Button } from 'src/components/ui/button/button';
 import { PopUp } from 'src/components/blocks/pop-up/pop-up';
 import { Order } from 'src/components/blocks/order/order';
 import { Tabs } from 'src/components/blocks/tabs/tabs';
-import { Comments } from 'src/components/blocks/comments/comments';
+import { Description } from 'src/components/blocks/description/description';
+import { Accordion } from 'src/components/blocks/accordion/accordion';
 
 import {StyledSection} from './styled';
 
 const INITIAL_QUANTITY = 1;
 
-const Product = () => {
+const Product = ({isAccordion}) => {
   const {code} = useParams(); // Получаем код продукта на который кликнули.
   const data = useContext(ProductContext);
   const product = data.find((product) => product.code === code);
@@ -31,6 +32,10 @@ const Product = () => {
 
   const popUpRef = useRef(null);
 
+  // Состояние для Description
+  const [isShowAllDescription, setIsShowAllDescription] = useState(false);
+  const MAX_DESCRIPTION_LENGTH = 200;
+
   const onButtonClick = () => {
     popUpRef.current.showModal();
   };
@@ -39,7 +44,15 @@ const Product = () => {
     {
       title: 'Описание',
       content: (
-        <Comments />
+        <Description
+          productDescription={
+            isShowAllDescription
+              ? product.description
+              : `${product.description.slice(0, MAX_DESCRIPTION_LENGTH)}...`
+          }
+          onShowMore={() => setIsShowAllDescription(!isShowAllDescription)}
+          isShowAllDescription={isShowAllDescription}
+        />
       )
     },
     {
@@ -52,6 +65,7 @@ const Product = () => {
     }
   ]
 
+
   return product ? (
     <StyledSection>
       <Title size={TitleSizes.BIG}>{product.title}</Title>
@@ -61,7 +75,7 @@ const Product = () => {
       <Price>{price} ₽</Price>
       <Delivery>{product.delivery}</Delivery>
       <Button onButtonClick={onButtonClick}>Купить</Button>
-      <Tabs tabs={tabs} />
+      {isAccordion ? <Accordion tabs={tabs} /> : <Tabs tabs={tabs} />}
       <PopUp ref={popUpRef}>
         <Order />
       </PopUp>

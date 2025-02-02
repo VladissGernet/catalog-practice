@@ -8,7 +8,8 @@ const mockData = [
       'https://sun9-16.userapi.com/impg/ZSNsvA1w_nSLiENHhznerhzJE5V2jtan3cf6hQ/LR86c549JRs.jpg?size=765x535&quality=95&sign=ffdcf39c7e03e9751557ba78dc4901a7&c_uniq_tag=I11XrPeDgrz6JcefvD5emkAo3E75eL4jhUqaN3hfZlA&type=album',
       'https://rd-robot.ru/assets/images/products/1750/large/high-quality-diy-anet-a8-acrylic-frame.jpg',
     ],
-    delivery: '31 января'
+    delivery: '31 января',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.Lorem ipsum dolor sit amet consectetur adipisicing elit. QuisquLorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.am, quae.'
   },
   {
     title: '3D-Принтер оптический',
@@ -19,7 +20,8 @@ const mockData = [
       'https://avatars.mds.yandex.net/i?id=e95b5236989d56f7c85b20d586db1b8212a9fd63-9029853-images-thumbs&n=13',
       'https://avatars.mds.yandex.net/i?id=9b7927ac1f89c481110619269e02bde2ff1c38d8-10871821-images-thumbs&n=13',
     ],
-    delivery: '22 января'
+    delivery: '22 января',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.'
   },
   {
     title: '3D-Принтер по металлу',
@@ -30,7 +32,8 @@ const mockData = [
       'https://3dmag.org/ru/uploads/images/00/00/02/2019/12/29/171292.jpg',
       'https://v-kurse.ru/wp-content/uploads/2021/08/f_d3d3Lmxhc2VyYXByLnJ1L2ZpbGVzL3NsczUvc2xzNS1zdGFub2stcHlhdGlrb29yZGluYXRub2ktbGF6ZXJub2ktc3ZhcmtpLnBuZz9fX2lkPTEyMjI4MA.jpeg',
     ],
-    delivery: '26 января'
+    delivery: '26 января',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.'
   },
 ];
 

@@ -26,7 +26,7 @@ const App = () => {
               {/* path - ссылка на страницу продукта. Далее см. Product */}
               <Route
                 path=":code"
-                element={<Product />}
+                element={<Product isAccordion />}
               />
             </Route>
             <Route

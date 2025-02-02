@@ -8,6 +8,7 @@ import { StyledPrice } from 'src/components/ui/price/styled';
 import { StyledDelivery } from 'src/components/ui/delivery/styled';
 import { StyledButton } from 'src/components/ui/button/styled';
 import { StyledTabs } from 'src/components/blocks/tabs/styled';
+import { StyledAccordion } from '../../blocks/accordion/styled';
 
 const StyledSection = styled.section`
   display: grid;
@@ -59,6 +60,12 @@ const StyledSection = styled.section`
     grid-area: tabs;
 
     margin-top: 30px;
+  }
+
+  ${StyledAccordion} {
+    grid-area: tabs;
+
+    margin-top: 40px;
   }
 `;
 
